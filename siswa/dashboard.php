@@ -182,6 +182,24 @@ body{
             <p>Absensi hari ini</p>
         </a>
 
+        <a href="feedback.php" class="card">
+            <span>⭐</span>
+            <h3>Feedback</h3>
+            <p>Beri rating guru</p>
+        </a>
+
+        <a href="ranking.php" class="card">
+            <span>🏆</span>
+            <h3>Ranking</h3>
+            <p>Lihat ranking siswa</p>
+        </a>
+
+        <a href="profil.php" class="card">
+            <span>👤</span>
+            <h3>Profil</h3>
+            <p>Edit data diri</p>
+        </a>
+
         <a href="../auth/logout.php" class="card logout">
             <span>🚪</span>
             <h3>Logout</h3>

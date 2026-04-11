@@ -167,6 +167,48 @@ body{
             <p>Tampilkan QR untuk siswa</p>
         </div>
 
+        <a href="data_mapel.php" class="card">
+            <span>📚</span>
+            <h3>Mata Pelajaran</h3>
+            <p>Kelola mata pelajaran</p>
+        </a>
+
+        <a href="data_kelas.php" class="card">
+            <span>🏫</span>
+            <h3>Kelas</h3>
+            <p>Kelola kelas</p>
+        </a>
+
+        <a href="data_jadwal.php" class="card">
+            <span>📅</span>
+            <h3>Jadwal</h3>
+            <p>Kelola jadwal</p>
+        </a>
+
+        <a href="data_guru.php" class="card">
+            <span>👨‍🏫</span>
+            <h3>Guru</h3>
+            <p>Kelola data guru</p>
+        </a>
+
+        <a href="ranking.php" class="card">
+            <span>🏆</span>
+            <h3>Ranking</h3>
+            <p>Performa guru & siswa</p>
+        </a>
+
+        <a href="absensi_guru.php" class="card">
+            <span>👨‍🏫</span>
+            <h3>Absensi Guru</h3>
+            <p>Kehadiran guru</p>
+        </a>
+
+        <a href="laporan.php" class="card">
+            <span>📄</span>
+            <h3>Laporan</h3>
+            <p>Ekspor data</p>
+        </a>
+
         <a href="../auth/logout.php" class="card logout">
             <span>🚪</span>
             <h3>Logout</h3>
