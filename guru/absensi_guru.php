@@ -56,15 +56,18 @@ $history = mysqli_query($conn, "SELECT * FROM absensi_guru WHERE teacher_id = $t
 <head>
     <meta charset="UTF-8">
     <title>Absensi Guru | MadrasahKu</title>
+    <meta name="theme-color" content="#2ecc71">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="manifest" href="../../manifest.json">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
     <style>
     *{box-sizing:border-box;margin:0;padding:0;font-family:'Poppins',sans-serif;}
-    body{min-height:100vh;background:linear-gradient(120deg,#3498db,#2980b9);padding:30px;}
+    body{min-height:100vh;background:linear-gradient(120deg,#2ecc71,#27ae60);padding:30px;}
     .container{background:#fff;max-width:800px;margin:0 auto;border-radius:24px;padding:30px;box-shadow:0 30px 70px rgba(0,0,0,.25);}
     .header{display:flex;justify-content:space-between;align-items:center;margin-bottom:25px;}
     .header h2{color:#2c3e50;}
     .back{text-decoration:none;background:#e8f4fd;padding:10px 18px;border-radius:12px;color:#2980b9;}
-    .status-box{background:linear-gradient(135deg,#3498db,#2980b9);color:#fff;padding:30px;border-radius:20px;text-align:center;margin-bottom:25px;}
+    .status-box{background:linear-gradient(135deg,#2ecc71,#27ae60);color:#fff;padding:30px;border-radius:20px;text-align:center;margin-bottom:25px;}
     .status-box h3{font-size:18px;opacity:.9;}
     .status-box .time{font-size:48px;font-weight:700;margin:10px 0;}
     .status-box .date{font-size:14px;}
@@ -145,6 +148,7 @@ $history = mysqli_query($conn, "SELECT * FROM absensi_guru WHERE teacher_id = $t
     </table>
 </div>
 
+<script src="../../assets/js/pwa.js"></script>
 <script>
 setInterval(() => {
     const now = new Date();

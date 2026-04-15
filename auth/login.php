@@ -4,6 +4,11 @@
     <meta charset="UTF-8">
     <title>MadrasahKu | Login</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta name="theme-color" content="#2ecc71">
+    <meta name="description" content="Aplikasi Absensi Digital Madrasah">
+    <link rel="manifest" href="../manifest.json">
+    <link rel="apple-touch-icon" href="../assets/img/logo.png">
 
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../assets/css/style.css">
@@ -170,11 +175,13 @@
 <!-- LOGIN -->
 <div class="container">
     <h2>MadrasahKu</h2>
-    <div class="subtitle">Aplikasi Absensi Digital</div>
+    <div class="subtitle">Smart System For Madrasah</div>
 
-    <form method="POST" action="login_process.php">
+    <div id="network-status" style="position:absolute;top:10px;right:10px;font-size:12px;padding:5px 10px;border-radius:15px;background:rgba(255,255,255,0.9);z-index:10;"></div>
+    
+    <form method="POST" action="login_process.php" id="loginForm">
         <input type="text" name="username" placeholder="Username" required>
-        <input type="password" name="password" placeholder="Password" required>
+        <input type="password" name="password" placeholder="Password" required autocomplete="current-password">
         <button type="submit">Login</button>
     </form>
 
@@ -186,5 +193,6 @@
 <!-- NAMA SEKOLAH -->
 <div class="school-name">MI PRIUK – CILEGON</div>
 
+<script src="../assets/js/pwa.js"></script>
 </body>
 </html>
