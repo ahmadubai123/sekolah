@@ -124,6 +124,18 @@ th {
 }
 
 /* RESPONSIVE */
+@media(max-width: 1200px) {
+    .card {
+        max-width: 340px;
+    }
+}
+
+@media(max-width: 900px) {
+    .dashboard {
+        max-width: 90%;
+    }
+}
+
 @media(max-width: 500px) {
     .card, .dashboard {
         padding: 20px;

@@ -31,7 +31,7 @@ $schedule_id = $_GET['schedule'] ?? 0;
 <html lang="id">
 <head>
     <meta charset="UTF-8">
-    <title>Kelola Absensi | HadirKu</title>
+    <title>Kelola Absensi | MadrasahKu</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
     <style>
     *{box-sizing:border-box;margin:0;padding:0;font-family:'Poppins',sans-serif;}

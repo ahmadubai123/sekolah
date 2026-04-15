@@ -6,29 +6,37 @@ requireRole('guru');
 $teacher_id = getUserId();
 $today = date('Y-m-d');
 
-// Handle check in / check out
-if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['action'])) {
-    $action = $_POST['action'];
+// Handle redirect to prevent resubmission
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    // Get the alert message before any output
+    $alert_msg = '';
     
-    // Check if already checked in today
+    $action = $_POST['action'] ?? '';
+    
     $cek = mysqli_query($conn, "SELECT * FROM absensi_guru WHERE teacher_id = $teacher_id AND tanggal = '$today'");
     
     if ($action === 'check_in') {
         if (mysqli_num_rows($cek) > 0) {
-            echo "<script>alert('Kamu sudah check-in hari ini');</script>";
+            $alert_msg = 'Kamu sudah check-in hari ini';
         } else {
             $jam = date("H:i:s");
             mysqli_query($conn, "INSERT INTO absensi_guru (teacher_id, tanggal, jam_masuk, status) VALUES ($teacher_id, '$today', '$jam', 'Hadir')");
-            echo "<script>alert('Check-in berhasil!');</script>";
+            $alert_msg = 'Check-in berhasil!';
         }
     } elseif ($action === 'check_out') {
         if (mysqli_num_rows($cek) == 0) {
-            echo "<script>alert('Kamu belum check-in');</script>";
+            $alert_msg = 'Kamu belum check-in';
         } else {
             $jam = date("H:i:s");
             mysqli_query($conn, "UPDATE absensi_guru SET jam_pulang = '$jam' WHERE teacher_id = $teacher_id AND tanggal = '$today'");
-            echo "<script>alert('Check-out berhasil!');</script>";
+            $alert_msg = 'Check-out berhasil!';
         }
+    }
+    
+    // Redirect after POST to prevent resubmission
+    if ($alert_msg) {
+        echo "<script>alert('$alert_msg'); window.location.href = 'absensi_guru.php';</script>";
+        exit;
     }
 }
 
@@ -47,7 +55,7 @@ $history = mysqli_query($conn, "SELECT * FROM absensi_guru WHERE teacher_id = $t
 <html lang="id">
 <head>
     <meta charset="UTF-8">
-    <title>Absensi Guru | HadirKu</title>
+    <title>Absensi Guru | MadrasahKu</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
     <style>
     *{box-sizing:border-box;margin:0;padding:0;font-family:'Poppins',sans-serif;}
@@ -138,7 +146,10 @@ $history = mysqli_query($conn, "SELECT * FROM absensi_guru WHERE teacher_id = $t
 </div>
 
 <script>
-setInterval(() => { location.reload(); }, 1000);
+setInterval(() => {
+    const now = new Date();
+    document.querySelector('.time').textContent = now.toLocaleTimeString('id-ID');
+}, 1000);
 </script>
 
 </body>

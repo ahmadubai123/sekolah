@@ -11,14 +11,14 @@ $teacher_name = getUserName();
 <html lang="id">
 <head>
     <meta charset="UTF-8">
-    <title>Dashboard Guru | HadirKu</title>
+    <title>Dashboard Guru | MadrasahKu</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/qrcodejs/qrcode.min.js"></script>
     <style>
     *{box-sizing:border-box;margin:0;padding:0;font-family:'Poppins',sans-serif;}
     body{
         min-height:100vh;
-        background:linear-gradient(120deg,#3498db,#2980b9,#1abc9c);
+        background:linear-gradient(120deg,#2ecc71,#27ae60,#1abc9c);
         background-size:300% 300%;
         animation:bgMove 10s ease infinite;
         display:flex;
@@ -47,7 +47,7 @@ $teacher_name = getUserName();
         to{opacity:1;transform:translateY(0)}
     }
     .header{
-        background:linear-gradient(135deg,#3498db,#2980b9);
+        background:linear-gradient(135deg,#2ecc71,#27ae60);
         color:#fff;
         padding:30px;
         border-radius:20px;
@@ -74,10 +74,10 @@ $teacher_name = getUserName();
     .card p{font-size:14px;color:#666;}
     .card:hover{
         transform:translateY(-12px);
-        background:linear-gradient(135deg,#3498db,#2980b9);
+        background:linear-gradient(135deg,#2ecc71,#27ae60);
         color:#fff;
     }
-    .card:hover p{color:#e8f4fd;}
+    .card:hover p{color:#eafff3;}
     .card.logout:hover{
         background:linear-gradient(135deg,#e74c3c,#c0392b);
     }

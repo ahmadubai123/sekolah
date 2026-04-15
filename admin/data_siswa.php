@@ -20,7 +20,7 @@ $total = mysqli_num_rows($data);
 <html lang="id">
 <head>
 <meta charset="UTF-8">
-<title>Data Siswa | HadirKu</title>
+<title>Data Siswa | MadrasahKu</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
 

@@ -11,7 +11,7 @@ if (!isset($_SESSION['role']) || $_SESSION['role'] != 'siswa') {
 <html lang="id">
 <head>
 <meta charset="UTF-8">
-<title>Kehadiran Siswa | HadirKu</title>
+<title>Kehadiran Siswa | MadrasahKu</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
 

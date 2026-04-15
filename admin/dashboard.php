@@ -11,7 +11,7 @@ $qr_url = "http://localhost/Aplikasi%20Absensi%20SISWA/siswa/scan.php";
 <html lang="id">
 <head>
 <meta charset="UTF-8">
-<title>Dashboard Admin | HadirKu</title>
+<title>Dashboard Admin | MadrasahKu</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
 <script src="https://cdn.jsdelivr.net/npm/qrcodejs/qrcode.min.js"></script>
@@ -130,8 +130,31 @@ body{
 }
 
 /* ===== RESPONSIVE ===== */
+@media(max-width:1200px){
+    .dashboard{max-width:90%;padding:25px;}
+    .menu{grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:15px}
+    .card{padding:20px;}
+    .card span{font-size:36px;}
+}
+
 @media(max-width:900px){
     .bg-left,.bg-right{display:none;}
+    .dashboard{padding:20px;}
+    .menu{grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px;}
+    .card{padding:18px;border-radius:16px;}
+    .card span{font-size:32px;}
+    .card h3{font-size:16px;}
+    .card p{font-size:12px;}
+    .header{padding:20px;}
+}
+
+@media(max-width:600px){
+    .menu{grid-template-columns:repeat(2,1fr);}
+    .card h3{font-size:14px;}
+}
+
+@media(max-width:400px){
+    .menu{grid-template-columns:1fr;}
 }
 </style>
 </head>
@@ -144,7 +167,7 @@ body{
 
 <div class="dashboard">
     <div class="header">
-        <h2>Dashboard Guru</h2>
+        <h2>Dashboard Admin</h2>
         <p>Halo, <b><?= htmlspecialchars($_SESSION['nama']); ?></b></p>
     </div>
 
